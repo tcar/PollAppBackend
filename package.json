@@ -1,0 +1,33 @@
+{
+  "name": "votingapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon votingApp.js",
+    "test-all": "npm run user-test && npm run poll-test",
+    "user-test": "node test/api_init.js && jest --testPathPattern test/userRoute",
+    "poll-test": "node test/api_init.js && jest --testPathPattern test/pollRoute"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.3",
+    "body-parser": "^1.18.3",
+    "chai-http": "^4.2.1",
+    "cluster": "^0.7.7",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "jest": "^23.6.0",
+    "jsonwebtoken": "^8.4.0",
+    "nodemon": "^1.18.9",
+    "os": "^0.1.1",
+    "pg": "^7.8.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.42.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.15.3"
+  }
+}
